@@ -1,0 +1,272 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #eaeaea;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #121212;
+  padding: 16px 40px;
+  border-bottom: 2px solid #ffcc00;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffcc00;
+  margin-bottom: -2px;
+  line-height: 1.1;
+}
+
+.tagline {
+  margin-top: -2px;
+}
+
+.tagline .text,
+.tagline .owner {
+  display: inline;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #ffcc00;
+}
+
+.tagline .owner {
+  margin-left: 6px;
+  font-size: 0.80rem;
+  color: #808080;
+}
+
+/* Nav */
+.nav {
+  background-color: #1a1a1a;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #eaeaea;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: 0.025em;
+}
+
+.nav a.active {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.nav a:active {
+  transform: translateY(0);
+}
+
+/* Main */
+main {
+  padding: 50px 40px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Products */
+.product {
+  background-color: #181818;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product:hover {
+  border-color: #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.product h2 {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 0.9rem;
+  color: #ccc;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 12px 0;
+  color: #ffffff;
+}
+
+button {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffe066;
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  padding: 30px 40px;
+  border-top: 2px solid #ffcc00;
+  margin-top: 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer p {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.social {
+  margin: 0;
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.social a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px;
+    margin-top: 60px;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .social {
+    justify-content: center;
+  }
+  
+  header {
+    padding: 16px 20px;
+  }
+  
+  .nav {
+    padding: 16px 20px;
+  }
+}
+
+/*
+ DUMMY PRODUCT ID's
+ 1af28-79e97
+c17d5-d9372
+d1e53-c71cc
+6c216-6d2a3
+fe55e-d9c85
+4ab3d-21e90
+21412-dc4b5
+92c67-34970
+70790-85a24
+f8fd3-b883e
+16188-9f80d
+ce364-82078
+443c9-def0d
+3163a-1d493
+20202-1de91
+7df61-150b5 
+*/
+  
